@@ -13,6 +13,12 @@
 		F6A4DA612268026500CEA270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A4DA5F2268026500CEA270 /* Main.storyboard */; };
 		F6A4DA632268026600CEA270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A4DA622268026600CEA270 /* Assets.xcassets */; };
 		F6A4DA662268026600CEA270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A4DA642268026600CEA270 /* LaunchScreen.storyboard */; };
+		F6A4DA752268055E00CEA270 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA742268055E00CEA270 /* HTTPStatusCode.swift */; };
+		F6A4DA77226805CE00CEA270 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA76226805CE00CEA270 /* API.swift */; };
+		F6A4DA79226805FA00CEA270 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA78226805FA00CEA270 /* NetworkRequest.swift */; };
+		F6A4DA802268076300CEA270 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */; };
+		F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA812268078100CEA270 /* DashboardViewController.swift */; };
+		F6A4DA84226807A700CEA270 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		F6A4DA622268026600CEA270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A4DA652268026600CEA270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6A4DA672268026600CEA270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A4DA742268055E00CEA270 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		F6A4DA76226805CE00CEA270 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F6A4DA78226805FA00CEA270 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		F6A4DA812268078100CEA270 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +58,6 @@
 				CDF723C9A9491840F5CAF9E9 /* Pods-iTunesAffiliate.debug.xcconfig */,
 				13382FC85917971F0E033253 /* Pods-iTunesAffiliate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +90,13 @@
 		F6A4DA5A2268026500CEA270 /* iTunesAffiliate */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA7A2268067500CEA270 /* Constants */,
+				F6A4DA732268050000CEA270 /* Coordinator */,
+				F6A4DA71226804CE00CEA270 /* Network */,
+				F6A4DA70226804C900CEA270 /* Helpers */,
+				F6A4DA6F226804C300CEA270 /* ViewModel */,
+				F6A4DA6E226804BE00CEA270 /* Model */,
+				F6A4DA6D226804B400CEA270 /* View */,
 				F6A4DA5B2268026500CEA270 /* AppDelegate.swift */,
 				F6A4DA5D2268026500CEA270 /* ViewController.swift */,
 				F6A4DA5F2268026500CEA270 /* Main.storyboard */,
@@ -87,6 +105,69 @@
 				F6A4DA672268026600CEA270 /* Info.plist */,
 			);
 			path = iTunesAffiliate;
+			sourceTree = "<group>";
+		};
+		F6A4DA6D226804B400CEA270 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4DA7E2268074700CEA270 /* Dashboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6A4DA6E226804BE00CEA270 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6A4DA6F226804C300CEA270 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6A4DA70226804C900CEA270 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F6A4DA71226804CE00CEA270 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4DA742268055E00CEA270 /* HTTPStatusCode.swift */,
+				F6A4DA76226805CE00CEA270 /* API.swift */,
+				F6A4DA78226805FA00CEA270 /* NetworkRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6A4DA732268050000CEA270 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F6A4DA7A2268067500CEA270 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F6A4DA7E2268074700CEA270 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */,
+				F6A4DA812268078100CEA270 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +182,7 @@
 				F6A4DA552268026500CEA270 /* Frameworks */,
 				F6A4DA562268026500CEA270 /* Resources */,
 				786C39A0D92157B448C8B931 /* [CP] Embed Pods Frameworks */,
+				F6A4DA7B2268068E00CEA270 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -152,6 +234,7 @@
 				F6A4DA662268026600CEA270 /* LaunchScreen.storyboard in Resources */,
 				F6A4DA632268026600CEA270 /* Assets.xcassets in Resources */,
 				F6A4DA612268026500CEA270 /* Main.storyboard in Resources */,
+				F6A4DA802268076300CEA270 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +289,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6A4DA7B2268068E00CEA270 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftgen >/dev/null; then\nswiftgen colors -t literals-swift4 \"$PROJECT_DIR/iTunesAffiliate/Constants/colors.json\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Colors.swift\"\nswiftgen strings -t structured-swift4 \"$PROJECT_DIR/iTunesAffiliate/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Strings.swift\"\nswiftgen xcassets -t swift4 \"$PROJECT_DIR/iTunesAffiliate/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Images.swift\"\nswiftgen storyboards -t swift4 \"$PROJECT_DIR/iTunesAffiliate/\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Storyboards.swift\" --param ignoreTargetModule --param module=Sharezie\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -213,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A4DA752268055E00CEA270 /* HTTPStatusCode.swift in Sources */,
+				F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */,
 				F6A4DA5E2268026500CEA270 /* ViewController.swift in Sources */,
+				F6A4DA77226805CE00CEA270 /* API.swift in Sources */,
 				F6A4DA5C2268026500CEA270 /* AppDelegate.swift in Sources */,
+				F6A4DA79226805FA00CEA270 /* NetworkRequest.swift in Sources */,
+				F6A4DA84226807A700CEA270 /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
