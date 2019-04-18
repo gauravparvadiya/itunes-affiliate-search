@@ -19,6 +19,7 @@
 		F6A4DA802268076300CEA270 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */; };
 		F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA812268078100CEA270 /* DashboardViewController.swift */; };
 		F6A4DA84226807A700CEA270 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */; };
+		F6A4DA86226807FE00CEA270 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA85226807FE00CEA270 /* Storyboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		F6A4DA812268078100CEA270 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		F6A4DA85226807FE00CEA270 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		F6A4DA7A2268067500CEA270 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA85226807FE00CEA270 /* Storyboards.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A4DA86226807FE00CEA270 /* Storyboards.swift in Sources */,
 				F6A4DA752268055E00CEA270 /* HTTPStatusCode.swift in Sources */,
 				F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */,
 				F6A4DA5E2268026500CEA270 /* ViewController.swift in Sources */,
