@@ -20,6 +20,10 @@
 		F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA812268078100CEA270 /* DashboardViewController.swift */; };
 		F6A4DA84226807A700CEA270 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */; };
 		F6A4DA86226807FE00CEA270 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA85226807FE00CEA270 /* Storyboards.swift */; };
+		F6A4DA88226808EE00CEA270 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA87226808EE00CEA270 /* AppCoordinator.swift */; };
+		F6A4DA8A2268097300CEA270 /* UIWindow+PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */; };
+		F6A4DA8C226809A000CEA270 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA8B226809A000CEA270 /* Coordinator.swift */; };
+		F6A4DA9022680CB100CEA270 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA8F22680CB000CEA270 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		F6A4DA812268078100CEA270 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F6A4DA83226807A700CEA270 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		F6A4DA85226807FE00CEA270 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		F6A4DA87226808EE00CEA270 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+PresentedViewController.swift"; sourceTree = "<group>"; };
+		F6A4DA8B226809A000CEA270 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F6A4DA8F22680CB000CEA270 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 		F6A4DA5A2268026500CEA270 /* iTunesAffiliate */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA8E22680C3000CEA270 /* Resources */,
 				F6A4DA7A2268067500CEA270 /* Constants */,
 				F6A4DA732268050000CEA270 /* Coordinator */,
 				F6A4DA71226804CE00CEA270 /* Network */,
@@ -102,7 +111,6 @@
 				F6A4DA5B2268026500CEA270 /* AppDelegate.swift */,
 				F6A4DA5D2268026500CEA270 /* ViewController.swift */,
 				F6A4DA5F2268026500CEA270 /* Main.storyboard */,
-				F6A4DA622268026600CEA270 /* Assets.xcassets */,
 				F6A4DA642268026600CEA270 /* LaunchScreen.storyboard */,
 				F6A4DA672268026600CEA270 /* Info.plist */,
 			);
@@ -135,6 +143,7 @@
 		F6A4DA70226804C900CEA270 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -152,6 +161,8 @@
 		F6A4DA732268050000CEA270 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA87226808EE00CEA270 /* AppCoordinator.swift */,
+				F6A4DA8B226809A000CEA270 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		F6A4DA7A2268067500CEA270 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA8F22680CB000CEA270 /* Images.swift */,
 				F6A4DA85226807FE00CEA270 /* Storyboards.swift */,
 			);
 			path = Constants;
@@ -171,6 +183,14 @@
 				F6A4DA812268078100CEA270 /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F6A4DA8E22680C3000CEA270 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4DA622268026600CEA270 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +206,7 @@
 				F6A4DA562268026500CEA270 /* Resources */,
 				786C39A0D92157B448C8B931 /* [CP] Embed Pods Frameworks */,
 				F6A4DA7B2268068E00CEA270 /* SwiftGen */,
+				F6A4DA8D22680BEC00CEA270 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -310,6 +331,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftgen >/dev/null; then\nswiftgen colors -t literals-swift4 \"$PROJECT_DIR/iTunesAffiliate/Constants/colors.json\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Colors.swift\"\nswiftgen strings -t structured-swift4 \"$PROJECT_DIR/iTunesAffiliate/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Strings.swift\"\nswiftgen xcassets -t swift4 \"$PROJECT_DIR/iTunesAffiliate/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Images.swift\"\nswiftgen storyboards -t swift4 \"$PROJECT_DIR/iTunesAffiliate/\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Storyboards.swift\" --param ignoreTargetModule --param module=Sharezie\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
+		F6A4DA8D22680BEC00CEA270 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -318,13 +357,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A4DA86226807FE00CEA270 /* Storyboards.swift in Sources */,
+				F6A4DA9022680CB100CEA270 /* Images.swift in Sources */,
 				F6A4DA752268055E00CEA270 /* HTTPStatusCode.swift in Sources */,
 				F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */,
 				F6A4DA5E2268026500CEA270 /* ViewController.swift in Sources */,
 				F6A4DA77226805CE00CEA270 /* API.swift in Sources */,
 				F6A4DA5C2268026500CEA270 /* AppDelegate.swift in Sources */,
+				F6A4DA8C226809A000CEA270 /* Coordinator.swift in Sources */,
+				F6A4DA88226808EE00CEA270 /* AppCoordinator.swift in Sources */,
 				F6A4DA79226805FA00CEA270 /* NetworkRequest.swift in Sources */,
 				F6A4DA84226807A700CEA270 /* DashboardViewModel.swift in Sources */,
+				F6A4DA8A2268097300CEA270 /* UIWindow+PresentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

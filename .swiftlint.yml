@@ -1,0 +1,15 @@
+disabled_rules:
+    - line_length
+    - trailing_whitespace
+    - statement_position
+    - identifier_name
+    - multiple_closures_with_trailing_closure
+excluded:
+    - Pods
+    - Libraries
+    - Sharezie/Constants/
+    - Sharezie/Helpers/HTTPStatusCodes.swift
+    - Sharezie/Helpers/HTTPStatusCodes+Extensions.swift
+type_body_length:
+- 500 # warning
+- 1000 # error
