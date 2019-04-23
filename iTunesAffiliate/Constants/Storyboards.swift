@@ -63,9 +63,6 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
   }
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
-  }
 }
 
 internal enum StoryboardSegue {

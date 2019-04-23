@@ -77,10 +77,18 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         searchBar.endEditing(true)
         showPopup(album: album)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+    }
 }
 
 extension DashboardViewController: UISearchBarDelegate, UISearchDisplayDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getData(text: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
     }
 }

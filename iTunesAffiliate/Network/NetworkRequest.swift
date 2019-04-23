@@ -75,10 +75,6 @@ struct Network {
                     errorCallback("Parsing error")
                 }
             case let .failure(error):
-//                if Date().timeIntervalSince(lastErrorThrowTime) >= 15 {
-//                    lastErrorThrowTime = Date()
-//                    SharezieToaster.shared.showToast(with: .failure, message: L10n.apiNetworkErrorMessage)
-//                }
                 failureCallback(error)
             }
         }
