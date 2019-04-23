@@ -2,7 +2,7 @@
 //  AlbumTableViewswift
 //  iTunesAffiliate
 //
-//  Created by Krupa Detroja on 19/04/19.
+//  Created by Gaurav Parvadiya on 19/04/19.
 //  Copyright © 2019 Gaurav Parvadiya. All rights reserved.
 //
 
