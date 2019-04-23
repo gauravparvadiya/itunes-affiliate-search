@@ -12,3 +12,15 @@ sudo gem install cocoapods
 ```
 pod install
 ```
+
+## 2 Xcode configuration
+
+- install swift lint: [swiftlint](https://github.com/realm/SwiftLint)
+```
+brew install swiftlint
+```
+
+- install swift gen: [swiftgen](https://github.com/SwiftGen/SwiftGen)
+```
+brew install swiftgen
+```
