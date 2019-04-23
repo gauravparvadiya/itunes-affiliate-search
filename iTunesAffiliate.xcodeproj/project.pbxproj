@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99E5D5EF2269A06000F1644C /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5D5EE2269A06000F1644C /* AlbumTableViewCell.swift */; };
 		C880004E266D53C59706C947 /* Pods_iTunesAffiliate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EA891CD4DF5D405E029F0D /* Pods_iTunesAffiliate.framework */; };
 		F6A4DA5C2268026500CEA270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA5B2268026500CEA270 /* AppDelegate.swift */; };
 		F6A4DA5E2268026500CEA270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA5D2268026500CEA270 /* ViewController.swift */; };
@@ -24,11 +25,14 @@
 		F6A4DA8A2268097300CEA270 /* UIWindow+PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */; };
 		F6A4DA8C226809A000CEA270 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA8B226809A000CEA270 /* Coordinator.swift */; };
 		F6A4DA9022680CB100CEA270 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA8F22680CB000CEA270 /* Images.swift */; };
+		F6A4DA922268104B00CEA270 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DA912268104B00CEA270 /* Album.swift */; };
+		F6ED2E4C226939B600DA5BA3 /* JsonDecoderEncoder+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED2E4B226939B600DA5BA3 /* JsonDecoderEncoder+Any.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13382FC85917971F0E033253 /* Pods-iTunesAffiliate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAffiliate.release.xcconfig"; path = "Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate.release.xcconfig"; sourceTree = "<group>"; };
 		89EA891CD4DF5D405E029F0D /* Pods_iTunesAffiliate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAffiliate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99E5D5EE2269A06000F1644C /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		CDF723C9A9491840F5CAF9E9 /* Pods-iTunesAffiliate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAffiliate.debug.xcconfig"; path = "Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate.debug.xcconfig"; sourceTree = "<group>"; };
 		F6A4DA582268026500CEA270 /* iTunesAffiliate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAffiliate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A4DA5B2268026500CEA270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+PresentedViewController.swift"; sourceTree = "<group>"; };
 		F6A4DA8B226809A000CEA270 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F6A4DA8F22680CB000CEA270 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F6A4DA912268104B00CEA270 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F6ED2E4B226939B600DA5BA3 /* JsonDecoderEncoder+Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonDecoderEncoder+Any.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		F6A4DA6E226804BE00CEA270 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4DA912268104B00CEA270 /* Album.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F6A4DA892268097300CEA270 /* UIWindow+PresentedViewController.swift */,
+				F6ED2E4B226939B600DA5BA3 /* JsonDecoderEncoder+Any.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -179,8 +187,9 @@
 		F6A4DA7E2268074700CEA270 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */,
 				F6A4DA812268078100CEA270 /* DashboardViewController.swift */,
+				99E5D5EE2269A06000F1644C /* AlbumTableViewCell.swift */,
+				F6A4DA7F2268076300CEA270 /* Dashboard.storyboard */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -293,20 +302,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iTunesAffiliate/Pods-iTunesAffiliate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftgen >/dev/null; then\nswiftgen colors -t literals-swift4 \"$PROJECT_DIR/iTunesAffiliate/Constants/colors.json\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Colors.swift\"\nswiftgen strings -t structured-swift4 \"$PROJECT_DIR/iTunesAffiliate/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Strings.swift\"\nswiftgen xcassets -t swift4 \"$PROJECT_DIR/iTunesAffiliate/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Images.swift\"\nswiftgen storyboards -t swift4 \"$PROJECT_DIR/iTunesAffiliate/\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Storyboards.swift\" --param ignoreTargetModule --param module=Sharezie\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftgen >/dev/null; then\nswiftgen colors -t literals-swift4 \"$PROJECT_DIR/iTunesAffiliate/Constants/colors.json\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Colors.swift\"\nswiftgen strings -t structured-swift4 \"$PROJECT_DIR/iTunesAffiliate/Base.lproj/Localizable.strings\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Strings.swift\"\nswiftgen xcassets -t swift4 \"$PROJECT_DIR/iTunesAffiliate/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Images.swift\"\nswiftgen storyboards -t swift4 \"$PROJECT_DIR/iTunesAffiliate/\" --output \"$PROJECT_DIR/iTunesAffiliate/Constants/Storyboards.swift\" --param ignoreTargetModule --param module=iTunesAffiliate\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 		F6A4DA8D22680BEC00CEA270 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -361,6 +361,9 @@
 				F6A4DA752268055E00CEA270 /* HTTPStatusCode.swift in Sources */,
 				F6A4DA822268078100CEA270 /* DashboardViewController.swift in Sources */,
 				F6A4DA5E2268026500CEA270 /* ViewController.swift in Sources */,
+				99E5D5EF2269A06000F1644C /* AlbumTableViewCell.swift in Sources */,
+				F6A4DA922268104B00CEA270 /* Album.swift in Sources */,
+				F6ED2E4C226939B600DA5BA3 /* JsonDecoderEncoder+Any.swift in Sources */,
 				F6A4DA77226805CE00CEA270 /* API.swift in Sources */,
 				F6A4DA5C2268026500CEA270 /* AppDelegate.swift in Sources */,
 				F6A4DA8C226809A000CEA270 /* Coordinator.swift in Sources */,

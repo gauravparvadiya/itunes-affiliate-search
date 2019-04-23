@@ -39,4 +39,50 @@ struct Network {
         
         return cancellableRequest
     }
+    
+    @discardableResult
+    static func request<T>(
+        _ target: API,
+        decodeType type: T.Type,
+        decoder: JSONDecoder = JSONDecoder(),
+        dispatchQueue: DispatchQueue? = nil,
+        success successCallback: @escaping (_ data: T) -> Void,
+        error errorCallback: @escaping (_ message: String) -> Void,
+        failure failureCallback: @escaping (MoyaError) -> Void,
+        completion completionCallback: @escaping () -> Void) -> Cancellable where T: Decodable {
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .customISO8601
+        
+        let cancellableRequest = provider.request(target) { result in
+            completionCallback()
+            switch result {
+            case let .success(response):
+                let statusCode = HTTPStatusCode(rawValue: response.statusCode) ?? HTTPStatusCode.ok
+                
+                if !statusCode.isSuccess {
+                    let string = try? response.mapString()
+                    let message = string ?? "no string error"
+                    errorCallback(message)
+                    return
+                }
+                do {
+                    let result = try decoder.decode(T.self, from: response.data)
+                    successCallback(result)
+                }
+                catch let e {
+                    print(e)
+                    errorCallback("Parsing error")
+                }
+            case let .failure(error):
+//                if Date().timeIntervalSince(lastErrorThrowTime) >= 15 {
+//                    lastErrorThrowTime = Date()
+//                    SharezieToaster.shared.showToast(with: .failure, message: L10n.apiNetworkErrorMessage)
+//                }
+                failureCallback(error)
+            }
+        }
+        
+        return cancellableRequest
+    }
 }

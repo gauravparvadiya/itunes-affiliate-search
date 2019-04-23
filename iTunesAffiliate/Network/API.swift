@@ -12,7 +12,7 @@ import Alamofire
 
 enum API {
     // POST
-    case fetchAlbum
+    case fetchAlbum(text: String)
 }
 
 extension API: TargetType {
@@ -25,13 +25,12 @@ extension API: TargetType {
         case .fetchAlbum:
             return "/search"
         }
-        
     }
     
     var method: Moya.Method {
         switch self {
         case .fetchAlbum:
-            return .post
+            return .get
         }
     }
     
@@ -39,10 +38,13 @@ extension API: TargetType {
         return "".utf8Encoded
     }
     
-    var parameters: [String: Any]? {
+    var parameters: [String: String]? {
         switch self {
-        case .fetchAlbum:
-            return ["term": "jack"]
+        case .fetchAlbum(let text):
+            return ["term": text,
+                    "media": "all",
+                    "entity": "album",
+                    "limit": "1000"]
         }
     }
     
@@ -53,7 +55,7 @@ extension API: TargetType {
     var task: Task {
         switch self {
         case .fetchAlbum:
-            return .requestParameters(parameters: parameters!, encoding: parameterEncoding)
+            return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
         }
     }
     
@@ -63,9 +65,6 @@ extension API: TargetType {
 }
 
 private extension String {
-    var urlEscaped: String {
-        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
     
     var utf8Encoded: Data { return data(using: .utf8)! }
 }

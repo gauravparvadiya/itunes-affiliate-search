@@ -21,7 +21,7 @@ class AppCoordinator: NSObject, Coordinator {
     
     func start() {
         let vc  = StoryboardScene.Dashboard.dashboardViewController.instantiate()
-//        vc.viewModel = NotesViewModel(context: context)
+        vc.viewModel = DashboardViewModel()
 //        vc.viewModel?.coordinator = self
         show(viewController: UINavigationController(rootViewController: vc), window: &window, shouldNavigate: false)
     }

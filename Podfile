@@ -6,5 +6,5 @@ target 'iTunesAffiliate' do
   use_frameworks!
   
   pod 'Moya', '~> 12.0'
-
+  pod 'SDWebImage'
 end

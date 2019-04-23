@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class DashboardViewModel {
+    
+    var albums: [Album] = []
+    
+    func searchAlbum(text: String, onSuccess: @escaping () -> Void) {
+        Network.request(.fetchAlbum(text: text), decodeType: AlbumResult.self, success: { albums in
+            self.albums = albums.results ?? []
+            onSuccess()
+        }, error: { _ in
+            //
+        }, failure: { _ in
+            //
+        }) {
+            //
+        }
+    }
+    
+}
